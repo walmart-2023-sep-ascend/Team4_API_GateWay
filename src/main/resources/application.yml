@@ -1,0 +1,28 @@
+server:
+ port: 8765
+
+spring:
+  application:
+    name: APIGateway
+  
+
+  cloud:
+   gateway:
+      routes:
+      - id: CartService
+        uri: http://localhost:9040/cart/
+        predicates:
+        - Path=/cart/**
+        
+      - id: ProductService
+        uri: http://localhost:9030/api/products/ 
+        predicates:
+         - Path=/api/products/**
+
+eureka:
+  client:
+    service-url:
+     defaultZone: http://localhost:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true
+      
