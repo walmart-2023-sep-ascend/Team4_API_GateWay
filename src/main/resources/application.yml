@@ -13,16 +13,24 @@ spring:
         uri: http://localhost:9040/cart/
         predicates:
         - Path=/cart/**
-        
+      - id: PromotionAndDiscountService
+        uri: http://localhost:9401/discount/
+        predicates:
+        - Path=/discount/**
+      - id: PromotionAndDiscountService
+        uri: http://localhost:9401/promotion/
+        predicates:
+        - Path=/promotion/**
       - id: ProductService
         uri: http://localhost:9030/api/products/ 
         predicates:
          - Path=/api/products/**
+         
 
 eureka:
   client:
     service-url:
-     defaultZone: http://localhost:8761/eureka
+    defaultZone: http://localhost:8761/eureka
     fetch-registry: true
     register-with-eureka: true
       
