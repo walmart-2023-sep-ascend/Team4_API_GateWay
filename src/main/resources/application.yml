@@ -14,11 +14,11 @@ spring:
         predicates:
         - Path=/cart/**
       - id: PromotionAndDiscountService
-        uri: http://localhost:9400/discount/
+        uri: http://172.203.170.91:9400/discount/
         predicates:
         - Path=/discount/**
       - id: PromotionAndDiscountService
-        uri: http://localhost:9400/promotion/
+        uri: http://172.203.170.91:9400/promotion/
         predicates:
         - Path=/promotion/**
      
