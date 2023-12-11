@@ -34,4 +34,8 @@ eureka:
      defaultZone: http://172.203.170.91:8761/eureka
     fetch-registry: true
     register-with-eureka: true
+  instance:
+   hostname: 172.203.170.91
+   preferIpAddress: true
+   
       
