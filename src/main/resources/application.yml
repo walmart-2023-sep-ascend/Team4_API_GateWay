@@ -39,6 +39,7 @@ eureka:
     register-with-eureka: true
   instance:
    hostname: 172.203.170.91
+   ip-address: 172.203.170.91
    preferIpAddress: true
    
       
